@@ -1,0 +1,3 @@
+<tr>
+	<td class="a-l" width="15%"><?php if (count($this->langs && isset($this->post['lang']))>1):?><img src="<?php echo FTP_EXT?>tpls/img/flags/16/<?php echo $this->lang?>.png" style="float:left;margin-right:4px" alt="" /> <?php endif;?><?php echo lang((isset($title)?'$'.$title.':':'$Title:'))?></td><td class="a-r" colspan="<?php echo ($colspan?$colspan:1)?>" width="85%"><input type="text" class="a-input _a-win_status" alt="<?php echo lang('$Title of entry is always required field')?>" id="a-w-title_<?php echo $this->name_id?>" style="width:99%" name="data[title]" value="<?php echo strform($this->post('title', false))?>" /></td>
+</tr>

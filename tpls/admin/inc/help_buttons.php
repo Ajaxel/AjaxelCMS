@@ -1,0 +1,1 @@
+<!--<a href="javascript:;" onclick="alert('Later..')"><img height="21" src="<?php echo FTP_EXT?>tpls/img/oxygen/22x22/categories/system-help.png" alt="Help contents" /></a>-->

@@ -1,0 +1,1 @@
+<div class="im_top"><div class="im_left">{$title|lang}</div><div class="im_close"></div></div>

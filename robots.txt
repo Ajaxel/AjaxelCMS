@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /banners/
+Disallow: /config/
+Disallow: /geo/
+Disallow: /inc/
+Disallow: /mod/
+Disallow: /files/temp/
+Disallow: /tpls/
+Disallow: /webstat/
+Disallow: /banner.php
+Disallow: /captcha.php
+Disallow: /captcha2.php
+Disallow: /songs.xml

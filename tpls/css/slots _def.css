@@ -1,0 +1,103 @@
+/* CSS Document */
+
+/*layout*/
+#slots {
+	width:900px;
+	border:1px solid #ddd;
+}
+#slots_top {
+	height:80px;
+	background:#fafafa;
+}
+#slots_barrels {
+	height:360px;
+	background:#fff;
+}
+#slots_stats {
+	height:80px;
+	background:#dedede;
+}
+#slots_buttons {
+	height:40px;
+	background:#fafafa;
+	text-align:center;
+}
+
+/*elements*/
+#slots_barrels .slots_left {
+	width:45px;
+	margin-right:5px;
+	height:360px;
+	float:left;
+	background:#eee;
+}
+#slots_barrels .slots_right {
+	width:45px;
+	margin-left:5px;
+	height:360px;
+	float:right;
+	background:#eee;
+}
+#slots_barrels ul {
+	float:left;
+	display:block;
+	list-style:none;
+	width:800px;
+	height:360px;
+	padding:0;margin:0;	
+}
+#slots_barrels ul li {
+	width:19%;
+	margin:0 0.5%;
+	text-align:center;
+	float:left;	
+}
+#slots_barrels ul li p {
+	height:114px;
+	margin:5px 0;
+	background:#ddd;
+	vertical-align:middle;
+}
+
+
+
+
+#slots_buttons table {
+	width:100%;	
+}
+#slots_buttons table th, #slots_buttons table td {
+	text-align:center;	
+}
+
+#slots_buttons table td button {
+	padding:4px 5px;
+	margin-top:7px;	
+}
+#slots_buttons table td button.active {
+	color:red;
+	font-weight:bold;	
+}
+#slots_buttons table th button {
+	font-weight:bold;
+	margin-top:5px;
+	padding:5px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

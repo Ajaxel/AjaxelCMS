@@ -1,0 +1,481 @@
+#poker {
+	position:relative;
+	width:900px;
+	height:720px;
+	cursor:default;
+	background:#fff;
+	outline:1px solid #ddd;
+	font-size:13px;
+	font-family:Arial;
+}
+#poker a {
+	color:#fff;
+	text-decoration:none;
+}
+#poker a:hover {
+	text-decoration:underline;	
+}
+#poker_top {
+	height:40px;
+	background:#eee;	
+}
+#poker_table {
+	position:relative;
+	height:510px;
+	background:#999;
+}
+#poker_bot {
+	display:none;	
+}
+#poker_bot, #poker_bot2 {
+	height:160px;
+}
+#poker_bot table {
+	width:100%;	
+}
+#poker_bot table td.poker_chat {
+	width:30%;
+}
+#poker_bot table td.poker_message {
+	width:30%;	
+}
+#poker_bot table td.poker_buttons {
+	width:40%;
+}
+#poker_bot table td.poker_buttons #poker_callany {
+	margin-right:0;	
+}
+#poker_bot td.poker_buttons a {
+	margin:10px 5px 0 5px;
+	border:1px solid #222;
+	background:#777;
+	color:#000;
+	font:bold 12px Arial;
+	padding:2px 4px;
+	display:inline-block;
+	text-shadow: #ccc 0px 1px 1px;
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+}
+#poker_bot td.poker_buttons a input {
+	position:relative;top:1px;
+}
+#poker_bot td.poker_buttons a.poker_check {
+	padding-right:18px;	
+	
+}
+#poker_bot td.poker_buttons a:hover {
+	text-decoration:none;
+	border:1px solid #222;
+	background:#333;
+	color:#fff;
+}
+#poker_bot td.poker_buttons a:active {
+	background:#000		
+}
+
+#poker .poker_seat {
+	width:90px;
+	height:120px;
+	background:#08070D;
+	position:absolute;
+	color:#fff;
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.5);box-shadow: 0 0 8px rgba(0,0,0,0.5);
+	
+}
+#poker .poker_seat .poker_deal {
+	font-weight:bold;
+	font-size:11px;
+	font-family:Arial;
+	text-align:center;
+	height:15px;
+	line-height:15px;
+	padding-top:1px;
+}
+#poker .poker_seat .poker_photo {
+	width:84px;
+	height:84px;
+	margin:0 auto;
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+#poker .poker_seat .poker_photo .poker_timer {
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	display:inline-block;
+	position:relative;
+	top:18px;left:4px;
+	z-index:2;
+	background:#000 url(../images/poker/timer.png) left no-repeat;
+	height:48px;
+	padding-left:50px;
+	padding-right:5px;
+	font-size:20px;
+	line-height:48px;
+	text-shadow: #222 0px 1px 1px;
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+}
+#poker .poker_seat .poker_hand {
+	display:none;
+	width:97px;
+	position:absolute;
+}
+#poker .poker_seat .poker_hand img {
+	float:left;
+	margin-right:3px;
+	-moz-box-shadow: 0 0 6px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 6px rgba(0,0,0,0.5);box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+#poker .poker_seat .poker_nohand {
+	width:44px;
+	display:none;
+	position:absolute;
+}
+#poker .poker_seat .poker_nohand img {
+	width:22px;
+	float:left;
+	margin-right:2px;
+	position:relative;
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.5);box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+#poker .poker_seat .poker_nohand img:last-child {
+	position:relative;
+	left:-18px;
+	top:4px;
+	z-index:1;
+	margin-right:-20px;
+}
+#poker .poker_seat .poker_cash {
+	font-weight:bold;
+	font-size:12px;
+	font-family:Arial;
+	text-align:center;
+	height:20px;
+	line-height:20px;	
+}
+#poker .poker_seat .poker_bet {
+	z-index:3;
+	font-weight:bold;
+	font-size:13px;
+	font-family:Arial;
+	height:20px;
+	line-height:20px;
+	text-shadow: #444 0px 1px 0px;
+	position:absolute;
+	width:90px;
+}
+
+#poker .poker_seat button {
+	border:1px solid #222;
+	background:#777;
+	color:#000;
+	padding:2px 4px;
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	margin:10px auto;
+	display:block;
+	font-weight:bold;
+	font-size:12px;
+	text-transform:uppercase;
+	cursor:pointer;cursor:hand;
+}
+#poker .poker_seat button:hover {
+	border:1px solid #222;
+	background:#333;
+	color:#fff;
+}
+
+
+
+
+
+#poker_dealer {
+	width:90px;
+	height:120px;
+	top:10px;
+	left:405px;
+}
+#poker_seat1 {
+	top:10px;
+	left:580px;
+}
+/*640 - 120 * 2*/
+#poker_seat2 {
+	top:100px;
+	left:750px;
+}
+#poker_seat3 {
+	top:290px;
+	left:750px;
+}
+
+#poker_seat4 {
+	top:380px;
+	left:580px;
+}
+#poker_seat5 {
+	top:380px;
+	left:405px;
+}
+#poker_seat6 {
+	top:380px;
+	left:230px;
+}
+#poker_seat7 {
+	top:290px;
+	left:60px;
+}
+#poker_seat8 {
+	top:100px;
+	left:60px;
+}
+#poker_seat9 {
+	top:10px;
+	left:230px;
+}
+
+
+
+#poker_seat1 .poker_hand {
+	top:87px;
+	left:-30px;
+}
+#poker_seat1 .poker_nohand {
+	top:126px;
+	left:10px;
+}
+#poker_seat1 .poker_bet {
+	top:132px;
+	left:15px;
+}
+
+#poker_seat2 .poker_hand {
+	top:44px;
+	left:-60px;
+}
+#poker_seat2 .poker_nohand {
+	top:70px;
+	left:-27px;
+}
+#poker_seat2 .poker_bet {
+	top:76px;
+	left:-100px;
+	text-align:right;
+}
+
+#poker_seat3 .poker_hand {
+	top:12px;
+	left:-60px;
+}
+#poker_seat3 .poker_nohand {
+	top:17px;
+	left:-27px;
+}
+#poker_seat3 .poker_bet {
+	top:24px;
+	left:-100px;
+	text-align:right;
+}
+
+#poker_seat4 .poker_hand {
+	top:-30px;
+	left:-30px;
+}
+#poker_seat4 .poker_nohand {
+	top:-37px;
+	left:10px;
+}
+#poker_seat4 .poker_bet {
+	top:-30px;
+	left:15px;
+}
+
+#poker_seat5 .poker_hand {
+	top:-30px;
+	left:0px;
+}
+#poker_seat5 .poker_nohand {
+	top:-37px;
+	left:34px;
+}
+#poker_seat5 .poker_bet {
+	top:-30px;
+	left:0px;
+	text-align:center;
+}
+
+#poker_seat6 .poker_hand {
+	top:-30px;
+	left:30px;
+}
+#poker_seat6 .poker_nohand {
+	top:-37px;
+	left:57px;
+}
+#poker_seat6 .poker_bet {
+	top:-30px;
+	left:-16px;
+	text-align:right;
+}
+
+#poker_seat7 .poker_hand {
+	top:12px;
+	left:60px;
+}
+#poker_seat7 .poker_nohand {
+	top:17px;
+	left:95px;
+}
+#poker_seat7 .poker_bet {
+	top:24px;
+	left:100px;
+}
+
+#poker_seat8 .poker_hand {
+	top:44px;
+	left:60px;
+}
+#poker_seat8 .poker_nohand {
+	top:70px;
+	left:95px;
+}
+#poker_seat8 .poker_bet {
+	top:76px;
+	left:100px;
+}
+
+#poker_seat9 .poker_hand {
+	top:87px;
+	left:30px;
+}
+#poker_seat9 .poker_nohand {
+	top:126px;
+	left:57px;
+}
+#poker_seat9 .poker_bet {
+	top:132px;
+	left:-16px;
+	text-align:right;
+}
+
+
+
+ul#poker_hand {
+	width:360px;
+	height:90px;
+	position:absolute;
+	top:190px;
+	left:235px;
+	list-style:none;
+	padding-left:32px;
+}
+ul#poker_hand li {
+	float:left;
+	padding-top:1px;
+	height:90px;
+	width:70px;
+	margin:0 0px 0 0;
+}
+ul#poker_hand li img {
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+#poker_pot {
+	position:absolute;
+	top:300px;
+	font-weight:bold;
+	font-size:15px;
+	left:0;
+	width:900px;
+	text-align:center;
+	color:#fff;
+	text-shadow: #444 0px 1px 0px;
+}
+#poker_message {
+	position:absolute;
+	top:360px;
+	font-size:12px;
+	left:0;
+	width:900px;
+	text-align:center;
+	color:#fff;
+	text-shadow: #444 0px 1px 0px;	
+}
+
+
+#poker_amount {
+	color:#fff;
+	display:none;
+	width:290px;
+	height:150px;
+	background:#000;
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.7);-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.7);box-shadow: 0 0 15px rgba(0,0,0,0.7);
+	position:absolute;
+	top:200px;
+	left:305px;
+}
+#poker_amount .poker_title {
+	background:#222;
+	padding:4px 10px;
+	font:13px Verdana;
+}
+#poker_amount .poker_content {
+	padding:10px 20px;
+}
+#poker_amount .poker_content input {
+	width:70px;
+	padding:4px 6px;
+	font:bold 14px Verdana;
+	border:1px solid #777;
+	background:#222;
+	color:#fff;
+	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+	-moz-box-shadow: 0 0 8px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.5);box-shadow: 0 0 8px rgba(0,0,0,0.5);
+	margin:10px auto;
+	text-align:center;
+	margin-top:23px;
+	display:block;	
+}
+#poker_amount .poker_content button {
+	border:1px solid #222;
+	background:#777;
+	color:#000;
+	padding:5px 14px;
+	-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+	margin:20px auto;
+	display:block;
+	font-weight:bold;
+	font-size:14px;
+	text-transform:uppercase;
+	cursor:pointer;cursor:hand;
+}
+#poker_amount .poker_content button:hover {
+
+	border:1px solid #222;
+	background:#333;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

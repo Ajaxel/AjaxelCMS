@@ -1,0 +1,787 @@
+/* 
+	Ajaxel slots
+	Made by Ajaxel CMS developer
+*/
+
+/*layout */
+div.l {
+	float:left;
+}
+div.r {
+	float:right	
+}
+#slots {
+	position:relative;
+	width:900px;
+	height:800px;
+	background:url(../images/slots/bg.jpg);
+	cursor:default;
+}
+#slots_top {
+	height:267px;
+}
+#slots_barrels {
+	height:279px;
+}
+
+.slots_stats, #slots_stats {
+	height:80px;
+}
+#slots_buttons {
+	clear:both;
+	height:40px;
+	text-align:center;
+	padding:6px 0 3px 0
+}
+#slots_top a {
+	display:block;
+	width:216px;
+	height:40px;
+	top:20px;
+	background:#F6D556;
+	position:relative;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0
+}
+#slots_top a:hover {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3; 
+}
+#slots_top a.l {
+	left:32px;
+	float:left;	
+}
+#slots_top a.r {
+	width:216px;
+	right:29px;
+	float:right;	
+}
+
+.slots_winner_text {
+	float:right;
+	text-align:center;
+	width:380px;
+	margin-right:44px;
+	margin-top:94px;
+	font:24px Arial;
+	color:#663300;
+}
+.slots_winner_text strong {
+	font-weight:normal;
+	font-size:30px;
+}
+
+#slots_paytable, #slots_rules, #slots_top100, #slots_final {
+	width:900px;
+	height:800px;
+	background:url(../images/slots/paytable.jpg);
+	position:absolute;
+	top:0px;
+	z-index:500;
+	display:none;	
+}
+#slots_rules {
+	background:url(../images/slots/rules.jpg);
+}
+#slots_top100, #slots_final {
+	background:url(../images/slots/top100.jpg);
+}
+#slots_paytable p, #slots_rules p, #slots_top100 p, #slots_final p {
+	font:13px Verdana;
+	padding:118px 40px 0 40px;
+	height:70px;
+}
+#slots_paytable ul {
+	padding:50px 20px 0 30px;
+	margin-top:15px;
+	list-style:none;
+	width:382px;
+	height:480px;
+}
+#slots_paytable a {
+	font-size:18px;
+	font-family:'Old English Text MT', Verdana;
+	color:#683402;
+}
+#slots_rules div {
+	padding:50px 50px 0 50px;
+	margin-top:15px;
+	list-style:none;
+	width:362px;
+	font:14px Verdana;
+	color:#663300;
+}
+#slots_top100 div, #slots_final div {
+	margin:11px 44px 0 42px;
+	height:582px;
+}
+
+table.slots_table, table.slots_table2 {
+	width:100%;
+	font:12px Verdana;
+}
+table.slots_table>tbody>tr>td {
+	width:33.33%;
+	padding:0 5px;
+	border-right:1px solid #D8B03F;
+}
+table.slots_table.slots_span4>tbody>tr>td {
+	width:25%;	
+}
+table.slots_table>tbody>tr>td:last-child {
+	border-right:none;	
+}
+table.slots_table2>tbody>tr>td {
+	background:#fff;
+	padding:4px 5px 2px 5px;
+	border-top:1px solid #DBB141;
+	white-space:nowrap;
+}
+table.slots_table2>tbody>tr>td.slots_i {
+	padding:0;	
+}
+table.slots_table2>tbody>tr>td:first-child {
+	width:1%;
+	padding-left:0;
+	font-size:14px;
+	font-family:'Old English Text MT', Verdana;
+	text-align:right;
+}
+table.slots_table2>tbody>tr>td:last-child, table.slots_table2>thead>tr>th:last-child {
+	text-align:right;
+	width:5%;
+	white-space:nowrap;
+}
+table.slots_table2>tbody>tr>td span {
+	display:inline-block;padding-top:4px;padding-left:4px;
+	overflow:hidden;
+}
+table.slots_table2>tbody>tr>td img {
+	margin:0!important;
+	float:left;		
+}
+table.slots_table2>thead>tr>th {
+	white-space:nowrap;
+	background:#F4D264;
+	font-weight:normal;
+	padding:3px 5px;
+	font-size:14px;
+	text-transform:capitalize;
+	font-family:'Old English Text MT', Verdana;
+}	
+table.slots_table.slots_span4 span {
+	width:90px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+table.slots_links {
+	border-spacing:0;
+	width:380px;
+	margin-left:42px;
+}
+table.slots_links td {
+	width:50%;
+	text-align:center;	
+}
+
+#slots_paytable ul li {
+	clear:both;
+	display:block;
+	width:382px;
+	height:48px;
+}
+#slots_paytable ul li .l1 {
+	padding-top:5px;
+	width:119px;	
+}
+#slots_paytable ul li .l2 {
+	width:40px;
+}
+#slots_paytable ul li .l2 img {
+	width:30px;
+	height:30px;
+	border:1px solid #020303;	
+}
+#slots_paytable ul li .l3 {
+	position:relative;top:-4px;
+	font:italic 14px/* 'Old English Text MT', */Verdana;
+	color:#000;
+	line-height:18px;
+}
+
+/*elements*/
+#slots_barrels .slots_left {
+	width:55px;
+	padding-left:124px;
+	margin-right:0px;
+	height:279px;
+	float:left;
+	position:relative;
+}
+#slots_barrels .slots_right {
+	width:157px;
+	height:179px;
+	padding-top:100px;
+	float:right;
+}
+#slots_barrels .slots_right a.slots_mute {
+	width:30px;
+	height:30px;
+	display:block;
+	background:url(../images/slots/sound.png);
+	position:relative;top:-80px;left:3px;
+	margin-bottom:-30px;	
+}
+#slots_barrels .slots_right a.slots_mute.slots_muted {
+	background:url(../images/slots/mute.png);
+}
+	
+#slots_barrels .slots_right button {
+	display:block;
+	background:url(../images/slots/spin.jpg);
+	width:33px;
+	height:94px;
+	border:none;
+	cursor:pointer;
+}
+#slots_barrels .slots_right button.active:active, #slots_barrels .slots_right button.clicked {
+	position:relative;left:1px;top:1px;	
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+#slots_barrels ul {
+	float:left;
+	display:block;
+	list-style:none;
+	width:557px;
+	height:280px;
+	overflow:hidden;
+	padding:0;margin:0;
+	position:relative;
+	padding-left:0px;
+}
+#slots_barrels ul li {
+	margin-top:1px;
+	margin-left:1px;
+	width:98px;
+	height:278px;
+	margin-right:11px;
+	text-align:center;
+	float:left;
+	background:#fff;
+}
+#slots_barrels ol {
+	float:left;
+	width:557px;
+	height:280px;
+	padding:0;margin:0;
+	list-style:none;
+	position:absolute;
+	left:179px;
+	z-index:100;
+}
+#slots_barrels ol li {
+	float:left;
+	top:-280px;
+	outline:1px solid #000;
+	margin-top:1px;
+	margin-left:1px;
+	width:98px;
+	height:278px;
+	margin-right:11px;
+	background:url(../images/slots/li.png);
+	/*-moz-box-shadow:inset 0 0px 8px #000000;-webkit-box-shadow:inset 0 0px 8px #000000;box-shadow:inset 0 0px 8px #000000;*/
+}
+#slots_barrels>ul>li>p.slots_win {
+	/*background:#dedede;*/
+	-moz-box-shadow:inset 0 0px 8px #000000;-webkit-box-shadow:inset 0 0px 8px #000000;box-shadow:inset 0 0px 8px #000000;
+}
+#slots_barrels ul li:last-child, #slots_barrels ol li:last-child {
+	margin-left:0;	
+}
+#slots_barrels ul li p {
+	height:87px;
+	margin:5px 5px 0 5px;
+	display:block;
+	vertical-align:middle;
+	z-index:30;
+	position:relative;
+}
+#slots_barrels ul li p.slot {
+	/*-moz-box-shadow:inset 0 0 10px #000000;-webkit-box-shadow:inset 0 0 10px #000000;box-shadow:inset 0 0 10px #000000;*/
+}
+#slots_barrels ul li p.slots_hov:hover {
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);box-shadow: 0 0 10px rgba(0,0,0,0.5)	
+}
+#slots_barrels .slots_lines {
+	width:537px;
+	height:278px;
+	margin:0 auto;
+	position:absolute;
+	z-index:20;
+	left:180px;
+	top:268px;
+}
+#slots_barrels .slots_lines img {
+	position:absolute;top:0px;left:0px;
+	z-index:20;
+	display:none;
+}
+
+#slots_win {
+	text-align:center;
+	font:bold 12px Verdana;
+	color:#f6d257;
+	padding-top:10px;
+	height:30px;
+}
+a.slots_paytable {
+	display:block;
+	width:100px;
+	height:18px;
+	margin:20px auto;
+	position:absolute;top:618px;left:400px;
+}
+#slots_double {
+	display:none;
+	position:relative;
+	top:2px;
+	z-index:1;
+	text-align:center;
+	height:17px;
+}
+#slots_double button {
+	width:70px;
+	height:17px;
+	border:none;
+	background:url(../images/slots/doubleup.png);
+	cursor:pointer;
+}
+
+ul.slots_stats {
+	position:absolute;
+	top:657px;left:78px;
+	width:670px;
+	height:90px;
+	margin:20px auto;
+	list-style:none;
+}
+ul#slots_stats {
+	position:absolute;
+	top:709px;left:80px;
+	width:670px;
+	height:90px;
+	margin:20px auto;
+	list-style:none;
+}
+ul#slots_stats li {
+	float:left;
+	width:100px;
+	height:15px;
+	text-align:center;
+	margin-right:40px;
+	margin-top:2px;
+	font:12px Verdana;
+	color:#000000;
+	line-height:25px;
+}
+ul.slots_stats li {
+	float:left;
+	width:140px;
+	height:15px;
+	text-align:center;
+	position:relative;
+	left:-20px;
+	margin-top:2px;
+	font:12px Verdana;
+	color:#000000;
+	line-height:25px;
+	text-shadow: #999 0px 2px 2px;
+}
+ul.slots_stats li {
+	font-size:10px;	
+}
+ul.slots_stats li.slots_li0 {
+	clear:both;
+	float:none;
+	height:22px;
+	margin-left:20px;
+	padding-top:5px;
+	width:540px;
+	text-align:center;
+	background:none;
+	font-size:12px;
+	text-transform:uppercase;
+}
+ul#slots_stats li.slots_li1, ul.slots_stats li.slots_li1 {
+	margin-left:3px;
+}
+ul#slots_stats li.slots_li3, ul.slots_stats li.slots_li3 {
+	font-weight:bold;
+}
+ul#slots_stats li.slots_li5 {
+	text-transform:uppercase;
+	line-height:100%;
+	font:8px Verdana;
+	color:#000000;
+	float:right;
+	width:60px;
+	position:relative;top:-24px;left:23px;
+}
+
+
+#slots_buttons table {
+	border-spacing:0;
+	width:557px;
+	margin:0 auto;
+}
+#slots_buttons table td {
+	text-align:center;	
+}
+#slots_buttons table td button, a.slots_back {
+	margin-top:10px;
+	width:60px;
+	height:20px;
+	border:none;
+	background:url(../images/slots/btn.png);
+	font:10px Verdana;
+	color:#fff;
+	cursor:pointer;
+	text-shadow: #222 0px 1px 2px;
+}
+#slots_buttons table td button:active {
+	position:relative;top:1px;left:1px;	
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);box-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+#slots_buttons button.active {
+	background:url(../images/slots/btn1.png)!important;
+}
+#slots_buttons.slots_lines1 button.btn1,
+#slots_buttons.slots_lines2 button.btn1,
+#slots_buttons.slots_lines3 button.btn1,
+#slots_buttons.slots_lines4 button.btn1,
+#slots_buttons.slots_lines5 button.btn1,
+#slots_buttons.slots_lines6 button.btn1,
+#slots_buttons.slots_lines7 button.btn1,
+#slots_buttons.slots_lines8 button.btn1,
+#slots_buttons.slots_lines9 button.btn1 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines2 button.btn2,
+#slots_buttons.slots_lines3 button.btn2,
+#slots_buttons.slots_lines4 button.btn2,
+#slots_buttons.slots_lines5 button.btn2,
+#slots_buttons.slots_lines6 button.btn2,
+#slots_buttons.slots_lines7 button.btn2,
+#slots_buttons.slots_lines8 button.btn2,
+#slots_buttons.slots_lines9 button.btn2 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines3 button.btn3,
+#slots_buttons.slots_lines4 button.btn3,
+#slots_buttons.slots_lines5 button.btn3,
+#slots_buttons.slots_lines6 button.btn3,
+#slots_buttons.slots_lines7 button.btn3,
+#slots_buttons.slots_lines8 button.btn3,
+#slots_buttons.slots_lines9 button.btn3 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines4 button.btn4,
+#slots_buttons.slots_lines5 button.btn4,
+#slots_buttons.slots_lines6 button.btn4,
+#slots_buttons.slots_lines7 button.btn4,
+#slots_buttons.slots_lines8 button.btn4,
+#slots_buttons.slots_lines9 button.btn4 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines5 button.btn5,
+#slots_buttons.slots_lines6 button.btn5,
+#slots_buttons.slots_lines7 button.btn5,
+#slots_buttons.slots_lines8 button.btn5,
+#slots_buttons.slots_lines9 button.btn5 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines6 button.btn6,
+#slots_buttons.slots_lines7 button.btn6,
+#slots_buttons.slots_lines8 button.btn6,
+#slots_buttons.slots_lines9 button.btn6 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines7 button.btn7,
+#slots_buttons.slots_lines8 button.btn7,
+#slots_buttons.slots_lines9 button.btn7 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines8 button.btn8,
+#slots_buttons.slots_lines9 button.btn8 {
+	background:url(../images/slots/btn5.png);
+}
+#slots_buttons.slots_lines9 button.btn9 {
+	background:url(../images/slots/btn5.png);
+}
+
+/*
+.slots_left {
+	position:relative;top:-9px;
+	left:10px;
+}
+
+
+.slots_cir {
+	width:25px;
+	height:25px;
+	display:block;
+	position:absolute;
+	background-image:url(../images/slots/lines.png);
+	background-repeat:no-repeat;
+	top:-1000px;
+	display:none;
+}
+
+
+
+.slots_lines1 .slots_cir.c1,
+.slots_lines2 .slots_cir.c1,
+.slots_lines3 .slots_cir.c1,
+.slots_lines4 .slots_cir.c1,
+.slots_lines5 .slots_cir.c1,
+.slots_lines6 .slots_cir.c1,
+.slots_lines7 .slots_cir.c1,
+.slots_lines8 .slots_cir.c1,
+.slots_lines9 .slots_cir.c1 {
+	top:136px;
+	background-position:0 -136px;
+	display:block;
+}
+.slots_lines2 .slots_cir.c2,
+.slots_lines3 .slots_cir.c2,
+.slots_lines4 .slots_cir.c2,
+.slots_lines5 .slots_cir.c2,
+.slots_lines6 .slots_cir.c2,
+.slots_lines7 .slots_cir.c2,
+.slots_lines8 .slots_cir.c2,
+.slots_lines9 .slots_cir.c2 {
+	top:54px;
+	background-position:0 -217px;
+	display:block;
+}
+.slots_lines3 .slots_cir.c3,
+.slots_lines4 .slots_cir.c3,
+.slots_lines5 .slots_cir.c3,
+.slots_lines6 .slots_cir.c3,
+.slots_lines7 .slots_cir.c3,
+.slots_lines8 .slots_cir.c3,
+.slots_lines9 .slots_cir.c3 {
+	top:217px;	
+	background-position:0 -54px;
+	display:block;
+}
+.slots_lines4 .slots_cir.c4,
+.slots_lines5 .slots_cir.c4,
+.slots_lines6 .slots_cir.c4,
+.slots_lines7 .slots_cir.c4,
+.slots_lines8 .slots_cir.c4,
+.slots_lines9 .slots_cir.c4 {
+	top:0px;	
+	background-position:0 0px;
+	display:block;
+}
+.slots_lines5 .slots_cir.c5,
+.slots_lines6 .slots_cir.c5,
+.slots_lines7 .slots_cir.c5,
+.slots_lines8 .slots_cir.c5,
+.slots_lines9 .slots_cir.c5 {
+	top:273px;
+	background-position:0 -273px;
+	display:block;	
+}
+.slots_lines6 .slots_cir.c6,
+.slots_lines7 .slots_cir.c6,
+.slots_lines8 .slots_cir.c6,
+.slots_lines9 .slots_cir.c6 {
+	top:27px;
+	background-position:0 -27px;
+	display:block;
+}
+.slots_lines7 .slots_cir.c7,
+.slots_lines8 .slots_cir.c7,
+.slots_lines9 .slots_cir.c7 {
+	top:245px;
+	background-position:0 -245px;
+	display:block;
+}
+.slots_lines8 .slots_cir.c8,
+.slots_lines9 .slots_cir.c8 {
+	top:164px;
+	background-position:0 -107px;
+	display:block;
+}
+.slots_lines9 .slots_cir.c9 {
+	top:107px;
+	background-position:0 -164px;
+	display:block;
+}
+*/
+.slots_left {
+	position:relative;
+	left:20px;
+}
+
+
+.slots_cir {
+	width:11px;
+	height:17px;
+	display:block;
+	position:absolute;
+	background-image:url(../images/slots/numbers.png);
+	background-repeat:no-repeat;
+	top:-1000px;
+	display:none;
+}
+
+#slots_buttons input {width:30px;height:17px;text-align:center;color:#fff;background:#BF9C0E;border:1px solid #1D3F16;-moz-box-shadow:inset 0 0px 8px #000000;-webkit-box-shadow:inset 0 0px 8px #000000;box-shadow:inset 0 0px 8px #000000;text-shadow: #222 0px 1px 2px;}
+a.slots_back {
+		
+}
+a.slots_back:hover {
+
+}
+
+#slots_buttons input#slots_coins {width:120px}
+
+
+.slots_lines1 .slots_cir.c1,
+.slots_lines2 .slots_cir.c1,
+.slots_lines3 .slots_cir.c1,
+.slots_lines4 .slots_cir.c1,
+.slots_lines5 .slots_cir.c1,
+.slots_lines6 .slots_cir.c1,
+.slots_lines7 .slots_cir.c1,
+.slots_lines8 .slots_cir.c1,
+.slots_lines9 .slots_cir.c1 {
+	top:132px;
+	background-position:0 -132px;
+	display:block;
+}
+.slots_lines2 .slots_cir.c2,
+.slots_lines3 .slots_cir.c2,
+.slots_lines4 .slots_cir.c2,
+.slots_lines5 .slots_cir.c2,
+.slots_lines6 .slots_cir.c2,
+.slots_lines7 .slots_cir.c2,
+.slots_lines8 .slots_cir.c2,
+.slots_lines9 .slots_cir.c2 {
+	top:51px;
+	background-position:0 -51px;
+	display:block;
+}
+.slots_lines3 .slots_cir.c3,
+.slots_lines4 .slots_cir.c3,
+.slots_lines5 .slots_cir.c3,
+.slots_lines6 .slots_cir.c3,
+.slots_lines7 .slots_cir.c3,
+.slots_lines8 .slots_cir.c3,
+.slots_lines9 .slots_cir.c3 {
+	top:214px;	
+	background-position:0 -214px;
+	display:block;
+}
+.slots_lines4 .slots_cir.c4,
+.slots_lines5 .slots_cir.c4,
+.slots_lines6 .slots_cir.c4,
+.slots_lines7 .slots_cir.c4,
+.slots_lines8 .slots_cir.c4,
+.slots_lines9 .slots_cir.c4 {
+	top:0px;	
+	background-position:0 0px;
+	display:block;
+}
+.slots_lines5 .slots_cir.c5,
+.slots_lines6 .slots_cir.c5,
+.slots_lines7 .slots_cir.c5,
+.slots_lines8 .slots_cir.c5,
+.slots_lines9 .slots_cir.c5 {
+	top:265px;
+	background-position:0 -265px;
+	display:block;	
+}
+.slots_lines6 .slots_cir.c6,
+.slots_lines7 .slots_cir.c6,
+.slots_lines8 .slots_cir.c6,
+.slots_lines9 .slots_cir.c6 {
+	top:24px;
+	background-position:0 -24px;
+	display:block;
+}
+.slots_lines7 .slots_cir.c7,
+.slots_lines8 .slots_cir.c7,
+.slots_lines9 .slots_cir.c7 {
+	top:242px;
+	background-position:0 -242px;
+	display:block;
+}
+.slots_lines8 .slots_cir.c8,
+.slots_lines9 .slots_cir.c8 {
+	top:161px;
+	background-position:0 -161px;
+	display:block;
+}
+.slots_lines9 .slots_cir.c9 {
+	top:103px;
+	background-position:0 -103px;
+	display:block;
+}
+
+
+
+
+.slots-deg, .slots-deg-o {
+    border: none;
+    -webkit-transition: all 0.1s ease 0.1s;
+    -moz-transition: all 0.1s ease 0.1s;
+    -o-transition: all 0.1s ease 0.1s;
+    transition: all 0.1s ease 0.1s;
+}
+.slots-deg {
+    -webkit-transform: scale(1.12) rotate(-10deg);
+    -moz-transform: scale(1.12) rotate(-10deg);
+    -ms-transform: scale(1.12) rotate(-10deg);
+    -o-transform: scale(1.12) rotate(-10deg);
+    transform: scale(1.12) rotate(-10deg);
+}
+.slots-deg-o {
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

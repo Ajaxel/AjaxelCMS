@@ -1,0 +1,18 @@
+This directory contains the GeoIP Free Netblock Edition.  The file is
+a Comma Separated Value (CSV) file and contains three columns:
+
+1. beginIpNum
+2. endIpNum
+3. netblockOwner
+
+To calucate beginIpNum and endIpNum, use the following formula:
+
+ipnum = 16777216*w + 65536*x + 256*y + z
+
+where
+
+IP Address = w.x.y.z
+
+Note that the file is a large download, so you may want to look at the
+sample contained in the SAMPLE.txt file in this directory.
+
